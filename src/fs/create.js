@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const create = async () => {
   const dir = join(__dirname, 'files', 'fresh.txt');
-  const error = Error('FS operation failed');
+  const error = new Error('FS operation failed');
 
   try {
     await access(dir);
